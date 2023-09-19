@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박정욱 - LIVE</title>
+    <script src="./js/jquery-1.11.3.min.js"></script>
+    <script src="./js/live.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- #wrap>header>.mainLogoMenu>h1.logo>a>img -->
+    <div id="wrap">
+        <header>
+            <div class="mainLogoMenu">
+                <h1 class="logo">
+                    <a href="#"><img src="./images/LIVE-LOGO.svg" alt="로고"></a>
+                </h1>
+                <!-- pc menu -->
+                <!-- nav.menu>ul>li*5>a -->
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">레퍼런스</a></li>
+                        <li><a href="#">스튜디오</a></li>
+                        <li><a href="#">Q&A</a></li>
+                        <li><a href="#">문의사항</a></li>
+                    </ul>
+                </nav>
+                <!-- mobile menu -->
+                <!-- nav.toggle>span>a>img -->
+                <nav class="toggle">
+
+                    <!-- 햄버거버튼 -->
+                    <span onclick="openNav()"><a href="#"><img src="./images/toggle.svg" alt="toggle"></a></span>
+
+                    <!-- 닫기버튼 : X  -->
+                    <!-- mobile 구조에 나오는 박스 -->
+                    <!-- #myNav.overlay>a.closeBtn -->
+                    <div id="myNav" class="overlay">
+                        <a href="#" class="closeBtn" onclick="closeNav()">&times;</a>
+                        <!-- mobile menu box -->
+                        <!-- .overlay-content>ul>li>a -->
+
+                        <div class="overlay-content">
+                            <ul>
+                                <li><a href="#">회사소개</a></li>
+                                <li><a href="#">레퍼런스</a></li>
+                                <li><a href="#">스튜디오</a></li>
+                                <li><a href="#">Q&A</a></li>
+                                <li><a href="#">문의사항</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- main>.centerImg>a>img -->
+        <main>
+            <div class="centerImg">
+                <a href="#"><img src="./images/mainImg.png" alt="메인이미지"></a>
+            </div>
+        </main>
+        <!-- footer>.mainBtn>a.btn>img -->
+        <footer>
+            <div class="mainBtn">
+                <a href="#" class="btn"><img src="./images/right-btn.svg" alt="하단버튼"></a>
+            </div>
+        </footer>
+    </div>
+    <!-- popup -->
+    <!-- #popup>span.close -->
+    <div id="popup"><span class="close">&times;</span></div>
+</body>
+
+</html>

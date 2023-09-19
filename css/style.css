@@ -1,0 +1,230 @@
+@charset "UTF-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: url("../images/bg.svg")no-repeat center/cover;
+    font-family: 'Noto Sans CJK KR', sans-serif;
+}
+
+/* "vh"는 "viewport height"의 약자
+height: 100vh;
+화면 높이에 관계없이 
+요소가 항상 화면 전체 높이와 동일하게 표시
+뷰포트의 100%로 설정 */
+
+#wrap {
+    width: 100%;
+}
+
+/* header */
+#wrap header {
+    width: 95%;
+    height: 10vh;
+    margin: 0 auto;
+}
+
+#wrap header .mainLogoMenu {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* logo */
+#wrap header .mainLogoMenu h1.logo img {
+    margin-top: 15px;
+    width: 55px;
+}
+
+/* pc menu */
+#wrap header .mainLogoMenu .menu {
+    margin-top: 20px;
+}
+
+#wrap header .mainLogoMenu .menu ul {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#wrap header .mainLogoMenu .menu ul li a {
+    font-weight: bold;
+    color: #fff;
+    opacity: 0.5;
+}
+
+#wrap header .mainLogoMenu .menu ul li a:hover,
+#wrap header .mainLogoMenu .menu ul li a:focus {
+    opacity: 1;
+}
+
+/* toggle 가리기 */
+#wrap header nav.toggle {
+    display: none;
+}
+
+/* main */
+#wrap main {
+    width: 100%;
+    height: 80vh;
+}
+
+#wrap main .centerImg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#wrap main .centerImg img {
+    max-width: 100%;
+}
+
+/* footer */
+#wrap footer {
+    width: 95%;
+    margin: 0 auto;
+    height: 50px;
+    position: relative;
+}
+
+#wrap footer .btn {
+    position: absolute;
+    bottom: -10px;
+    right: -5px;
+}
+
+/* popup */
+#popup {
+    border-radius: 20px;
+    display: none;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    width: 400px;
+    height: 425px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: url("../images/popup.png")no-repeat center/cover;
+}
+
+#popup .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: #fff;
+    display: block;
+    cursor: pointer;
+}
+
+#popup .close:hover {
+    opacity: 0.5;
+}
+
+/* mobile */
+@media(max-width:720px) {
+
+    /* 변화되는 값만 코딩 */
+    #wrap header .mainLogoMenu .menu {
+        display: none;
+    }
+
+    /* toggle 보기*/
+    #wrap header nav.toggle {
+        display: block;
+        /* 보기 */
+    }
+
+    #wrap header nav.toggle span {
+        display: block;
+        color: #fff;
+        position: absolute;
+        top: 23px;
+        right: 14px;
+    }
+
+    #wrap header nav.toggle span img {
+        width: 35px;
+    }
+
+    #wrap header nav.toggle span img:hover {
+        opacity: 0.5;
+    }
+
+    /* menu box */
+    #wrap header nav.toggle .overlay {
+        width: 0;
+        height: 100%;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow: hidden;
+        transition: .1s;
+    }
+
+    #wrap header nav.toggle .overlay a.closeBtn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 40px;
+        color: #fff;
+    }
+
+    #wrap header nav.toggle .overlay a.closeBtn:hover {
+        opacity: 0.5;
+    }
+
+    /* 모바일 구조의 메뉴 */
+    #wrap header nav.toggle .overlay ul li a {
+        opacity: 1;
+        padding: 15px;
+        font-size: 20px;
+        color: #fff;
+        display: block;
+        transition: .3s;
+    }
+
+    #wrap header nav.toggle .overlay ul li a:hover,
+    #wrap header nav.toggle .overlay ul li a:focus {
+        opacity: 0.5;
+    }
+
+    #wrap header nav.toggle .overlay .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+
+
+    #popup {
+        max-width: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
